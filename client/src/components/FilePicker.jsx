@@ -1,6 +1,8 @@
 import React from 'react'
 
-const FilePicker = () => {
+import CustomButton from './CustomButton'
+
+const FilePicker = ({}) => {
   return (
     <div>FilePicker</div>
   )
