@@ -28,13 +28,47 @@ const Customizer = () => {
       case "colorpicker":
         return <ColorPicker />
       case "filepicker":
-        return <FilePicker />
+        return <FilePicker
+          file={setFile}
+          readFile={readFile}
+        />
       case "aipicker":
         return <AIPicker />
 
       default:
         return null
     }
+  }
+
+  const handleDecals = (type, res) => {
+    const DecalType = DecalTypes[type]
+
+    state[DecalType.stateProperty] = res
+
+    if (!activeFilterTab[DecalType.filterTab]) {
+      handleActiveFilterTab(decalType.filterTab)
+    }
+  }
+
+  const handleActiveFilterTab = (tabName) => {
+    switch (tabName) {
+      case 'logoShirt':
+        state.isLogoTexture = !activeFilterTab[tabName]
+        break;
+      case 'stylishShirt':
+        state.isFullTexture = !activeFilterTab[tabName]
+          default: 
+          state.isLogoTexture = true
+          state.isFullTexture = false
+    }
+  }
+
+  const readFile = (type) => {
+    reader(file)
+      .then((res) => {
+        handleDecals(type, res)
+        setActiveEditorTab('')
+      })
   }
 
   return (
