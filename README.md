@@ -6,8 +6,11 @@
 It is possible to design the texture of the shirt in any color the customer wants or even add an image that will determine the texture of the shirt
 And the same goes for a logo that will be added to the shirt and everything in a three-dimensional model to make it easier for the customer
 
+## Demo
 
+Please try the app right here (I would love to receive your review)
 
+-> https://stylify.vercel.app/
 
 ## Deployment
 If you are interested in working on the project please use the following commands to get started
