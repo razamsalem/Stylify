@@ -31,15 +31,15 @@ const Customizer = () => {
         return <FilePicker
           file={setFile}
           readFile={readFile}
-        />
-      case "aipicker":
-        return <AIPicker />
-
-      default:
-        return null
-    }
-  }
-
+          />
+          case "aipicker":
+            return <AIPicker />
+            
+            default:
+              return null
+            }
+          }
+          
   const handleDecals = (type, res) => {
     const DecalType = DecalTypes[type]
 
