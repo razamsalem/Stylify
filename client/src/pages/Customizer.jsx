@@ -29,17 +29,18 @@ const Customizer = () => {
         return <ColorPicker />
       case "filepicker":
         return <FilePicker
-          file={setFile}
+          file={file}
+          setFile={setFile}
           readFile={readFile}
-          />
-          case "aipicker":
-            return <AIPicker />
-            
-            default:
-              return null
-            }
-          }
-          
+        />
+      case "aipicker":
+        return <AIPicker />
+
+      default:
+        return null
+    }
+  }
+
   const handleDecals = (type, res) => {
     const DecalType = DecalTypes[type]
 
@@ -57,9 +58,9 @@ const Customizer = () => {
         break;
       case 'stylishShirt':
         state.isFullTexture = !activeFilterTab[tabName]
-          default: 
-          state.isLogoTexture = true
-          state.isFullTexture = false
+      default:
+        state.isLogoTexture = true
+        state.isFullTexture = false
     }
   }
 
